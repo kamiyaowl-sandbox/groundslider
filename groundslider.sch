@@ -314,20 +314,9 @@ U 1 1 56F78560
 P 3200 6825
 F 0 "P3" H 3200 6925 50  0000 C CNN
 F 1 "M3Drill" V 3300 6825 50  0000 C CNN
-F 2 "hastech:M3_Drill" H 3200 6825 50  0001 C CNN
+F 2 "kamiya:M3Drill2" H 3200 6825 50  0001 C CNN
 F 3 "" H 3200 6825 50  0000 C CNN
 	1    3200 6825
-	0    -1   -1   0   
-$EndComp
-$Comp
-L CONN_01X01 P4
-U 1 1 56F786EA
-P 3500 6825
-F 0 "P4" H 3500 6925 50  0000 C CNN
-F 1 "M3Drill" V 3600 6825 50  0000 C CNN
-F 2 "hastech:M3_Drill" H 3500 6825 50  0001 C CNN
-F 3 "" H 3500 6825 50  0000 C CNN
-	1    3500 6825
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -336,7 +325,7 @@ U 1 1 56F7878A
 P 3800 6825
 F 0 "P5" H 3800 6925 50  0000 C CNN
 F 1 "M3Drill" V 3900 6825 50  0000 C CNN
-F 2 "hastech:M3_Drill" H 3800 6825 50  0001 C CNN
+F 2 "kamiya:M3Drill2" H 3800 6825 50  0001 C CNN
 F 3 "" H 3800 6825 50  0000 C CNN
 	1    3800 6825
 	0    -1   -1   0   
@@ -347,7 +336,7 @@ U 1 1 56F78790
 P 4100 6825
 F 0 "P6" H 4100 6925 50  0000 C CNN
 F 1 "M3Drill" V 4200 6825 50  0000 C CNN
-F 2 "hastech:M3_Drill" H 4100 6825 50  0001 C CNN
+F 2 "kamiya:M3Drill2" H 4100 6825 50  0001 C CNN
 F 3 "" H 4100 6825 50  0000 C CNN
 	1    4100 6825
 	0    -1   -1   0   
@@ -358,7 +347,7 @@ U 1 1 56F787BA
 P 4375 6825
 F 0 "P7" H 4375 6925 50  0000 C CNN
 F 1 "M3Drill" V 4475 6825 50  0000 C CNN
-F 2 "hastech:M3_Drill" H 4375 6825 50  0001 C CNN
+F 2 "kamiya:M3Drill2" H 4375 6825 50  0001 C CNN
 F 3 "" H 4375 6825 50  0000 C CNN
 	1    4375 6825
 	0    -1   -1   0   
@@ -656,7 +645,7 @@ F 1 "CONN_02X05" H 1625 6225 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Angled_2x05" H 1625 5325 50  0001 C CNN
 F 3 "" H 1625 5325 50  0000 C CNN
 	1    1625 6525
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L GND #PWR025
@@ -751,7 +740,7 @@ Text Label 2025 4150 1    60   ~ 0
 SWDIO
 Text Label 2525 4150 1    60   ~ 0
 UART_TX
-Text Label 4975 6750 0    60   ~ 0
+Text Label 5000 6750 0    60   ~ 0
 UART_TX
 $Comp
 L CONN_01X05 P9
@@ -836,17 +825,6 @@ F 1 "GND" H 2625 1100 50  0000 C CNN
 F 2 "" H 2625 1250 50  0000 C CNN
 F 3 "" H 2625 1250 50  0000 C CNN
 	1    2625 1250
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR033
-U 1 1 56F8812D
-P 3200 7125
-F 0 "#PWR033" H 3200 6875 50  0001 C CNN
-F 1 "GND" H 3200 6975 50  0000 C CNN
-F 2 "" H 3200 7125 50  0000 C CNN
-F 3 "" H 3200 7125 50  0000 C CNN
-	1    3200 7125
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -980,7 +958,7 @@ Connection ~ 10775 4175
 Wire Wire Line
 	10775 4525 10775 4475
 Wire Wire Line
-	1375 5525 900  5525
+	900  5525 1375 5525
 Wire Wire Line
 	1375 5625 1025 5625
 Wire Wire Line
@@ -1052,7 +1030,7 @@ Wire Wire Line
 Wire Wire Line
 	5575 6650 5000 6650
 Wire Wire Line
-	5575 6750 4975 6750
+	5575 6750 5000 6750
 Wire Wire Line
 	2525 4150 2525 3775
 Wire Wire Line
@@ -1065,17 +1043,9 @@ Wire Wire Line
 	2725 1175 2625 1175
 Wire Wire Line
 	2625 1175 2625 1250
-Wire Wire Line
-	3200 7125 3200 7025
-Wire Wire Line
-	3200 7025 4375 7025
-Connection ~ 4100 7025
-Connection ~ 3800 7025
-Connection ~ 3500 7025
-Connection ~ 3200 7025
-Text Label 5000 6550 0    60   ~ 0
-EZI2C_SCL
 Text Label 5000 6650 0    60   ~ 0
+EZI2C_SCL
+Text Label 5000 6550 0    60   ~ 0
 EZI2C_SDA
 $Comp
 L CONN_01X01 CS1
@@ -1444,4 +1414,20 @@ Ground Slider Segment\n
 Connection ~ 1200 5525
 Connection ~ 2625 4475
 Connection ~ 2625 4775
+$Comp
+L CONN_01X01 P4
+U 1 1 56F786EA
+P 3500 6825
+F 0 "P4" H 3500 6925 50  0000 C CNN
+F 1 "M3Drill" V 3600 6825 50  0000 C CNN
+F 2 "kamiya:M3Drill2" H 3500 6825 50  0001 C CNN
+F 3 "" H 3500 6825 50  0000 C CNN
+	1    3500 6825
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 4375 7025
+NoConn ~ 4100 7025
+NoConn ~ 3800 7025
+NoConn ~ 3500 7025
+NoConn ~ 3200 7025
 $EndSCHEMATC
